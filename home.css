@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-image: url('images/home.jpeg'); /* Link to your image (can be a local file or a URL) */
+    background-repeat: no-repeat; /* Prevents the image from repeating like a grid */
+    background-position: center;
+    background-size: cover; /* Ensures the background covers the entire screen */
+    background-attachment: fixed; /* Keeps the background fixed in place while scrolling */
+    background-color: #f0f0f0; /* Fallback color in case the image fails to load */
+}
+
+
+/* interactive desk */
+.laptop {
+    position: absolute;
+    top: 340px;
+    left: 50%;           
+    transform: translateX(-50%);  /* centers perfectly over the middle line */
+    display: inline-block; /* Keeps the link area tracking with the image size */
+    transition: transform 0.3s ease-in-out;
+}
+
+.laptop:hover {
+    /* CRITICAL: You must keep translateX(-50%) here so it stays centered while scaling! */
+    transform: translateX(-50%) scale(1.03); /* 1.1 means it grows to 110% of its size */
+}
+
+.monitor {
+    position: absolute;
+    top: 300px;
+    left: 26%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.monitor:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.resume {
+    position: absolute;
+    top: 650px;
+    left: 35%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.resume:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.artwork1 {
+    position: absolute;
+    top: 550px;
+    left: 72%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.artwork1:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.artwork2 {
+    position: absolute;
+    top: 520px;
+    left: 69.5%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.artwork2:hover {
+    transform: translateX(-50%) scale(1.03);
+}
+
+.sticky1 {
+    position: absolute;
+    top: 342px;
+    left: 20.5%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky1:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.sticky2 {
+    position: absolute;
+    top: 589px;
+    left: 80%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky2:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.sticky3 {
+    position: absolute;
+    top: 480px;
+    left: 80.5%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky3:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.sticky4 {
+    position: absolute;
+    top: 720px;
+    left: 71%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky4:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.sticky5 {
+    position: absolute;
+    top: 710px;
+    left: 68%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.sticky5:hover {
+    transform: translateX(-50%) scale(1.1);
+}
