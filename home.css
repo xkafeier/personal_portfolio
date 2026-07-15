@@ -7,19 +7,42 @@
 body, html {
     height: 100%;
     overflow: hidden;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-image: url('images/home.jpeg'); /* Link to your image (can be a local file or a URL) */
-    background-repeat: no-repeat; /* Prevents the image from repeating like a grid */
-    background-position: center;
-    background-size: cover; /* Ensures the background covers the entire screen */
-    background-attachment: fixed; /* Keeps the background fixed in place while scrolling */
-    background-color: #f0f0f0; /* Fallback color in case the image fails to load */
+h1 {
+    line-height: 50px;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+}
+
+
+/* nav bar */
+.navBar {
+    position: absolute;
+    top: 5px;
+    left: 92%;         
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navBar:hover {
+    transform: translateX(-50%) scale(1.05);
 }
 
 
 /* interactive desk */
+.table {
+    position: absolute;
+    top: 550px;
+    left: 50%;         
+    transform: translateX(-50%);  /* centers perfectly over the middle line */
+    display: inline-block; /* Keeps the link area tracking with the image size */
+    transition: transform 0.3s ease-in-out;
+}
+
 .laptop {
     position: absolute;
     top: 340px;
@@ -31,7 +54,7 @@ body {
 
 .laptop:hover {
     /* CRITICAL: You must keep translateX(-50%) here so it stays centered while scaling! */
-    transform: translateX(-50%) scale(1.03); /* 1.1 means it grows to 110% of its size */
+    transform: translateX(-50%) scale(1.05); /* 1.1 means it grows to 110% of its size */
 }
 
 .monitor {
@@ -44,20 +67,20 @@ body {
 }
 
 .monitor:hover {
-    transform: translateX(-50%) scale(1.03);
+    transform: translateX(-50%) scale(1.05);
 }
 
 .resume {
     position: absolute;
-    top: 650px;
-    left: 35%;           
+    top: 655px;
+    left: 33%;           
     transform: translateX(-50%);
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 }
 
 .resume:hover {
-    transform: translateX(-50%) scale(1.03);
+    transform: translateX(-50%) scale(1.1);
 }
 
 .artwork1 {
@@ -70,7 +93,7 @@ body {
 }
 
 .artwork1:hover {
-    transform: translateX(-50%) scale(1.03);
+    transform: translateX(-50%) scale(1.1);
 }
 
 .artwork2 {
@@ -83,10 +106,10 @@ body {
 }
 
 .artwork2:hover {
-    transform: translateX(-50%) scale(1.03);
+    transform: translateX(-50%) scale(1.1);
 }
 
-.sticky1 {
+.figma-sticky {
     position: absolute;
     top: 342px;
     left: 20.5%;           
@@ -95,11 +118,11 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.sticky1:hover {
-    transform: translateX(-50%) scale(1.1);
+.figma-sticky:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
-.sticky2 {
+.github-sticky {
     position: absolute;
     top: 589px;
     left: 80%;           
@@ -108,11 +131,11 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.sticky2:hover {
-    transform: translateX(-50%) scale(1.1);
+.github-sticky:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
-.sticky3 {
+.sticky {
     position: absolute;
     top: 480px;
     left: 80.5%;           
@@ -121,11 +144,11 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.sticky3:hover {
-    transform: translateX(-50%) scale(1.1);
+.sticky:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
-.sticky4 {
+.mail-sticky {
     position: absolute;
     top: 720px;
     left: 71%;           
@@ -134,8 +157,8 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.sticky4:hover {
-    transform: translateX(-50%) scale(1.1);
+.mail-sticky:hover {
+    transform: translateX(-50%) scale(1.2);
 }
 
 .sticky5 {
@@ -148,5 +171,70 @@ body {
 }
 
 .sticky5:hover {
+    transform: translateX(-50%) scale(1.2);
+}
+
+.mobil-sticky {
+    position: absolute;
+    top: 740px;
+    left: 78%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobil-sticky:hover {
+    transform: translateX(-50%) scale(1.2);
+}
+
+.mouse {
+    position: absolute;
+    top: 650px;
+    left: 64%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mouse:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.keyboard {
+    position: absolute;
+    top: 610px;
+    left: 50%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.keyboard:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.pencil1 {
+    position: absolute;
+    top: 700px;
+    left: 22%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pencil1:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+.pencil2 {
+    position: absolute;
+    top: 645px;
+    left: 19%;           
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pencil2:hover {
     transform: translateX(-50%) scale(1.1);
 }
