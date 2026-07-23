@@ -1,79 +1,103 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden;
+body {    
+    margin: 0;
+    background-color: #F8F5F0;
+    font-family:'Times New Roman', Times, serif;
+    color: #666;
+    display: flex;
+    justify-content: center; 
+    min-height: 100vh;    
+    align-items: center; 
 }
 
-body {
-    background: url('images/contactPage.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
-    position: relative;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 
 /* nav bar */
-.nav-bar {
-    border: none;
-    background: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-}
-
-.nav-bar-icon {
-    position: absolute;
-    top: 20px;
-    left: 93.5%;          
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.nav-bar-icon:hover {
-    transform: translateX(-50%) scale(1.05);
-}
-
-/* Side navigation container */
-.sidenav {
-    height: 100%;
-    width: 0; /* Hidden by default */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: transparent;
     position: fixed;
-    z-index: 1000; /* Stays on top of everything */
     top: 0;
-    right: 0;
-    background-color: #78709A; /* Matches the base color of your SVG rect */
-    overflow-x: hidden; /* Disable horizontal scroll */
-    transition: 0.4s ease; /* Slide animation speed */
-    padding-top: 60px; /* Place content sixtypx from the top */
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
-/* Side nav links */
-.sidenav a {
-    padding: 8px 8px 8px 32px;
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
     text-decoration: none;
-    font-size: 25px;
-    color: #F3F3F3; /* Matches your SVG inner light gray */
-    display: block;
-    transition: 0.3s;
-    font-family: sans-serif;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Hover effects for links */
-.sidenav a:hover {
-    color: #C0C1FF; /* Matches your SVG light blue */
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
+.nav-links a::after {
+    content: '';
     position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* main */
+p {
+  text-align: center;
+}
+
+.contact-section {
+    margin-top: 30px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.social-icons svg {
+    width: 25px;
+    height: 25px;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    font-size: 10pt;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    z-index: 100;
 }

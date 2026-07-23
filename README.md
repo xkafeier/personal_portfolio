@@ -8,9 +8,9 @@ fill in...<br><br>
 ### Building Tools
 - HTML5
 - CSS
-- Vanilla JavaScript<br><br>
+- JavaScript<br><br>
 
-### Features
+### Features & Specifications
 fill in...<br><br>
 
 ### Development Logs & Reflections

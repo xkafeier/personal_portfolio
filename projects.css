@@ -4,14 +4,87 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden;
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;    
+    background-color: #F8F5F0;   
 }
 
-body {
-    background: url('images/projectsPage.jpeg') no-repeat center center fixed;
-    background-size: cover;
-    height: 100vh;
+
+/* nav bar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
     position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* main */
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+/* footer */
+footer {
+    position: fixed;
+    font-size: 10pt;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #666;
+    text-align: center;
+    padding: 15px;
+    z-index: 100;
 }

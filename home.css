@@ -4,237 +4,191 @@
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-    overflow: hidden;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;    
+    background-color: #F8F5F0;   
 }
-
-h1 {
-    line-height: 50px;
-    position: absolute;
-    top: 150px;
-    left: 40%;
-}
-
 
 /* nav bar */
-.navBar {
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #666;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
     position: absolute;
-    top: 5px;
-    left: 92%;         
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #333;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #333;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* content */
+.open-box {
+    max-width: 100%;
+    height: auto;
+}
+
+.project {
+    position: absolute;
+    top: 425px;
+    left: 45%;         
     transform: translateX(-50%);
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 }
 
-.navBar:hover {
+.project:hover {
+    transform: translateX(-50%) scale(1.02);
+}
+
+.mail {
+    position: absolute;
+    top: 400px;
+    left: 52%;         
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.mail:hover {
     transform: translateX(-50%) scale(1.05);
 }
 
-
-/* interactive desk */
-.table {
+.linkedin {
     position: absolute;
-    top: 550px;
-    left: 50%;         
-    transform: translateX(-50%);  /* centers perfectly over the middle line */
-    display: inline-block; /* Keeps the link area tracking with the image size */
-    transition: transform 0.3s ease-in-out;
-}
-
-.laptop {
-    position: absolute;
-    top: 340px;
-    left: 50%;           
-    transform: translateX(-50%);  /* centers perfectly over the middle line */
-    display: inline-block; /* Keeps the link area tracking with the image size */
-    transition: transform 0.3s ease-in-out;
-}
-
-.laptop:hover {
-    /* CRITICAL: You must keep translateX(-50%) here so it stays centered while scaling! */
-    transform: translateX(-50%) scale(1.05); /* 1.1 means it grows to 110% of its size */
-}
-
-.monitor {
-    position: absolute;
-    top: 300px;
-    left: 26%;           
+    top: 410px;
+    left: 52.8%;         
     transform: translateX(-50%);
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 }
 
-.monitor:hover {
+.linkedin:hover {
+    transform: translateX(-50%) scale(1.05);
+}
+
+.github {
+    position: absolute;
+    top: 420.5px;
+    left: 53.6%;         
+    transform: translateX(-50%);
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github:hover {
     transform: translateX(-50%) scale(1.05);
 }
 
 .resume {
     position: absolute;
-    top: 655px;
-    left: 33%;           
+    top: 360px;
+    left: 60%;         
     transform: translateX(-50%);
     display: inline-block;
     transition: transform 0.3s ease-in-out;
 }
 
 .resume:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.artwork1 {
-    position: absolute;
-    top: 550px;
-    left: 72%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.artwork1:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.artwork2 {
-    position: absolute;
-    top: 520px;
-    left: 69.5%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.artwork2:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.figma-sticky {
-    position: absolute;
-    top: 342px;
-    left: 20.5%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.figma-sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.github-sticky {
-    position: absolute;
-    top: 589px;
-    left: 80%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.github-sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.sticky {
-    position: absolute;
-    top: 480px;
-    left: 80.5%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.mail-sticky {
-    position: absolute;
-    top: 720px;
-    left: 71%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.mail-sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.linkedin-sticky {
-    position: absolute;
-    top: 710px;
-    left: 68%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.linkedin-sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.mobil-sticky {
-    position: absolute;
-    top: 740px;
-    left: 78%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.mobil-sticky:hover {
-    transform: translateX(-50%) scale(1.2);
-}
-
-.mouse {
-    position: absolute;
-    top: 650px;
-    left: 64%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.mouse:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.keyboard {
-    position: absolute;
-    top: 610px;
-    left: 50%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-.keyboard:hover {
     transform: translateX(-50%) scale(1.05);
 }
 
-.pencil1 {
-    position: absolute;
-    top: 700px;
-    left: 22%;           
-    transform: translateX(-50%);
+.hidden {
+    display: none !important;
+}
+
+#closed-box {
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#closed-box:hover {
+    transform: scale(1.02);
+}
+
+#box-wrapper {
+    position: relative;
     display: inline-block;
-    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    width: 596px;   
+    height: 599px;  
 }
 
-.pencil1:hover {
-    transform: translateX(-50%) scale(1.1);
-}
-
-.pencil2 {
+.box-state {
     position: absolute;
-    top: 645px;
-    left: 19%;           
-    transform: translateX(-50%);
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    will-change: opacity;
 }
 
-.pencil2:hover {
-    transform: translateX(-50%) scale(1.1);
+#closed-box {
+    opacity: 1;
+    visibility: visible;
+}
+
+#closed-box-hover {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+#box-wrapper:hover #closed-box {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#box-wrapper:hover #closed-box-hover {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.hidden {
+    display: none !important;
 }
